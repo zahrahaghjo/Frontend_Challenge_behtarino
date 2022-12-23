@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Row,Col,Button} from "react-bootstrap";
 import ProCard from "../../components/ProCard";
+import Loading from "../../components/Loading";
 import Head from 'next/head'
 import Container from 'react-bootstrap/Container';
 
@@ -30,6 +31,11 @@ function Product(props){
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="SHOPPING WEBSITE" />
       </Head>
+      {
+          loading?
+            <Loading/>
+        :
+     
       <Container>
             <Row className="border-bottom pb-3 mt-3">
                 <Col xl={9} md={12} className="d-flex justify-content-start align-items-center">
@@ -58,6 +64,7 @@ function Product(props){
                 }
             </Row>
             </Container>
+             }
     </>
     )
 }

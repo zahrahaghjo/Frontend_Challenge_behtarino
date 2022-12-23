@@ -1,5 +1,6 @@
 import styles from '../styles/Product.module.css';
 
+
 export default function Title({title}){
     return(
         <p 
