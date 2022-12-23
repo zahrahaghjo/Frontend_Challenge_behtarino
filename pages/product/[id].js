@@ -53,6 +53,5 @@ Product.getInitialProps = async function (props) {
     .catch(error => {
                 global.Err = "err"
             })
-            console.log('item',item)
     return { res: {item:global.item,err:global.Err} }
 }
